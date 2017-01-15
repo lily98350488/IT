@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A Trip to Venice</title>
+	<link rel="icon" type="image/png" id="favicon" href="images/title.png"/>
+	<link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu+Condensed" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+			text-decoration: none;
+			font-family:'Abel', 'arial', '微軟正黑體';
+		}
+		body{
+			overflow-x: hidden;
+		}
+		.pp{
+			position: absolute;
+			top: 0;
+			display: none;
+		}
+		.block{
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+		}
+		.box{
+			outline: 1px solid #000;
+			width: 100%;
+			height: 100vh;
+			background-attachment: fixed;
+			position: relative;
+		}
+/*入口===============================================*/
+		.entrance{
+			z-index: 50;
+			/*display: none;*/
+			background-color: rgba(0, 0, 0, .8);
+		}
+		.entrance h1{
+			position: fixed;
+			color: #fff;
+			text-align: center;
+			left: 0;	
+			right: 0;	
+			margin: auto;
+			top: 40%;
+			font-family: 'Ubuntu Condensed', sans-serif;
+			font-size: 5vw;
+		}
+		.entrance a{
+			position: fixed;
+			top: 60%;	
+			left: 0;	
+			right: 0;	
+			margin: auto;
+			color: #fff;
+			border: 2px solid #fff;
+			border-radius: 10px;
+			display: block;
+			height: 30px;	
+			width: 100px;
+			text-align: center;
+			line-height: 30px;
+		}
+		.entrance #bgvid { 
+			width: auto;
+    		height: auto;
+    		min-width: 100%;
+    		min-height: 100%;
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    background: url(images/000.JPG) no-repeat;
+		    background-size: cover; 
+		}
+/*controller===========================================*/
+	.controller{
+		position: fixed;
+		right: 5%;
+		top: 44%;
+		z-index: 1;
+	}
+	.controller li{
+		height: 2vw;
+		width: 2vw;
+		margin: 1vh;
+		text-align: center;
+		position: relative;
+	}
+	.controller a{
+		display: inline-block;
+		width: 1.2vw;
+		height: 1.2vw;
+		border-radius: 50%;
+		background-color: #000;
+		transition: .5s;
+		right: 0;
+	}
+	.cona{	
+		transform: scale(.5);
+	}
+/*box0================================================*/
+	.box0{
+		background-image: url(images/002.JPG);
+		background-position: 0 0;
+		background-size: cover;
+		z-index: 2;
+	}
+	.box .timme{
+		display: block;
+		width: 7vw;
+		height: 7vw;
+		position: absolute;
+		background-color: #aaa;
+		border-radius: 50%;
+		font-size: 1.2vw;
+		line-height: 7vw;
+		text-align: center;
+		background-color: #000;
+		color: #fff;
+	}
+	/*map==================================================*/
+		.box0 .mapp{
+			height: 100%;	
+			width: 100%;
+			position: absolute;
+			left: 0;	
+			background-color: rgba(0, 0, 0, .6);
+			background-image: url(images/map.png);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: 150vh;
+		}
+		.box0 .mapp .timme {
+			left: 75%;
+			top: 77%;
+			animation: blin 1s infinite alternate;		
+		}
+		@keyframes blin{
+			0%{box-shadow: 0px 0px 2vw .2vw #fa0;}
+			100%{box-shadow: 0px 0px 1vw 0vw #fa0;}
+		}
+		.box0 .mapp li a{
+			display: inline-block;
+			width: 4vw;
+			height: 4vw;
+			color: #fff;
+			text-align: center;
+			margin: 5vw;
+			line-height: 3vh;
+			position: absolute;
+			font-family: 'Ubuntu Condensed';
+			background-color: rgba(0, 0, 0, .6);
+			border-radius: 50%;
+			
+		}
+		.box0 .mapp li a:after{
+			content: '';
+			display: block;
+			height: 0;
+			width: 0;
+			border-top: 2vw solid #fff;
+			border-left: 1vw solid transparent;
+			border-right: 1vw solid transparent;
+			margin: 5% auto;
+		}
+		.box0 .mapp li .link1{
+			top: 49vh;
+			left: 19%;
+			padding: 1.6vw 1vw .4vw 1vw;
+			color: #E6AF2E;
+			width: 5vw;
+			height: 5vw;
+		}
+		.box0 .mapp li .link1:after{
+			border-top: 2vw solid #E6AF2E; 
+		}
+		.box0 .mapp li .link2{
+			top: 54vh;
+			left: 30%;
+			padding: .2vw 1vw 1.8vw 1vw;;
+		}
+		.box0 .mapp li .link3{
+			top: 63vh;
+			left: 36%;
+			padding: .8vw 1vw 1.2vw 1vw;
+			width: 5vw;
+			height: 5vw;
+		}
+		.box0 .mapp li .link4{
+			top: 25vh;
+			left: 40%;
+			padding: 1.4vw 1vw .6vw 1vw;
+		}
+		.box0 .mapp li .link5{
+			top: -7%;
+			left: 74%;
+			padding: 1.4vw 1vw .6vw 1vw;
+		}
+		.box0 .mapp li a:hover{
+			animation: ink .8s infinite alternate;
+		}
+		@keyframes ink{
+			0%{transform: scale(1);}
+			100%{transform: scale(.8);}
+		}
+	/*schedule==================================================*/
+		.box0 .schedule{
+			background-color: rgba(255, 255, 255, .4);
+			position: absolute;
+			left: 100%;
+			z-index: 1
+		}
+		.box0 .schedule .timme {
+			left: 5%;
+			top: 80%;
+			animation: blin 1s infinite alternate;
+		}
+		.schedule .mennn{
+			position: relative;
+		}
+		.schedule .menu{
+			width: 90%;
+			height: 90vh;
+			position: absolute;
+			top: 30vh;
+			left: 10vw;
+		}
+		.schedule .menu li{
+			display: block;
+			width: 16vw;
+			height: 10vw;
+			position: relative;
+			float: left;
+			margin: 1vw auto;
+		}
+		.schedule .menu li div[class^="ttt"]{
+			width: 10vw;
+			height: 10vw;
+			border-radius: 50%;
+			position: absolute;
+			background-color: #e3b23c;
+			top: 0;
+			right: 0;
+		}
+		.schedule .menu li .ooo8{
+			width: 8vw;
+			height: 8vw;
+			top: 1vw;
+			right: 1vw;
+			background-color: #e3b23c;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 0;
+		}
+		.schedule .menu li div[class^="ss"]{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			opacity: 0;
+			transition: .5s
+			z-index: 2;
+		}
+		.schedule .menu li .oo8{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			opacity: 1;
+			transition: 0s;
+			z-index: 2;
+		}
+		.schedule .menu li div[class^="ss"]:hover{animation: bling 1s; opacity:1;}
+		.schedule .menu li .oo8:hover{animation: bling 1s; opacity:1;}
+		@keyframes bling{
+			0%{opacity:1; transform: scale(0);}
+			100%{opacity:1; transform: scale(1);}
+		}
+		.schedule .menu li .ss1{background-image:url(images/t1.png); background-position:50% 50%;}
+		.schedule .menu li .ss2{background-image:url(images/t2.png); background-position:50% 50%;}
+		.schedule .menu li .ss3{background-image:url(images/t3.png); background-position:50% 50%;}
+		.schedule .menu li .ss4, 
+		.schedule .menu li .ss9 
+		{background-image:url(images/t4.png); background-position:50% 50%;}
+		.schedule .menu li .ss5{background-image:url(images/t5.png); background-position:50% 50%;}
+		.schedule .menu li .ss6{background-image:url(images/t6.png); background-position:50% 50%;}
+		.schedule .menu li .ss7{background-image:url(images/t7.png); background-position:100% 100%;}
+		.schedule .menu li .oo8{background-image:url(images/t8.png); background-position:50% 50%;}
+		.schedule .menu li a{
+			cursor: context-menu;
+			display: block;
+			width: 10vw;
+			height: 8vw;
+			border-radius: 50%;
+			position: absolute;
+			left: 6vw;
+			color: #000;
+			font-size:2vw;
+			text-align: center; 
+			padding-top: 2vw;
+			line-height: 5vw;
+			font-family: 'Ubuntu Condensed', sans-serif;
+			z-index: 0;
+		}
+		.schedule .menu li .trip2, .schedule .menu li .trip3, .schedule .menu li .trip5{
+			line-height: 2vw;
+		}
+		.schedule .menu li .trip4, .schedule .menu li .trip9{
+			line-height: 6vw;
+			font-size: 2.2vw;
+		}
+		.schedule .menu li .trip8{
+			width: 8vw;
+			height: 8vw;
+			left: 7vw;
+			top: 1vw;
+			padding-top: 0;
+			text-align: center;
+			line-height: 8vw;
+		}
+		.schedule .menu li a:before{
+			content: '';
+			display: block;
+			height: 3vw;
+			width: 6vw; 
+			border-bottom: .5vw solid #000;
+			position: absolute;
+			left: -6vw;
+			top: 2vw;
+			text-align: center;
+			color: #000;
+			font-size: 2vw;
+			font-weight: bold;
+			line-height: 4vw;
+			font-family:'Abel'
+		}
+		.schedule .menu li .trip1:before{content: '8:00';}
+		.schedule .menu li .trip2:before{content: '9:00';}
+		.schedule .menu li .trip3:before{content: '10:00';}
+		.schedule .menu li .trip4:before{content: '12:00';}
+		.schedule .menu li .trip5:before{content: '13:00';}
+		.schedule .menu li .trip6:before{content: '14:00';}
+		.schedule .menu li .trip7:before{content: '16:00';}
+		.schedule .menu li .trip8:before{
+			left: -7vw;
+			top: 1vw;
+			width: 7vw;
+		}
+		.schedule .menu li .trip9:before{
+			content: '18:00';
+			width: 7vw;
+			left: -7vw;
+		}
+		.schedule .menu li .trip2:after, .schedule .menu li .trip3:after, .schedule .menu li .trip5:after{
+			top: 7vw;
+		}
+		.menu li a:after{
+			content: '';
+			display: block;
+			height: 5vw;
+			width: 10vw; 
+			position: absolute;
+			top: 5vw;
+			text-align: center;
+			color: #000;
+			font-size: 1vw;
+		}
+		.schedule .menu li .trip1:after{content: '車站';}
+		.schedule .menu li .trip2:after{content: '聖馬可廣場';}
+		.schedule .menu li .trip3:after{content: '總督宮';}
+		.schedule .menu li .trip5:after{content: '聖喬治·馬焦雷島';}
+		.schedule .menu li .trip6:after{content: '玻璃島';}
+		.schedule .menu li .trip7:after{content: '彩虹島';}
+/*main區塊設定======================================*/
+	h2{
+		font-size: 2vw;
+		line-height: 1.5em;
+	}
+	h4{
+		font-size: 1.5vw;
+		line-height: 1.5em;
+	}
+	p{
+		font-size: 1vw;
+		line-height: 1.5em;
+		margin: 1% auto;
+	}
+	.box .main{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		overflow: hidden;
+	}		
+	.box div[class^="txt"]{
+		height: 100%;
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+	}
+	.box div[class^="p"]{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		z-index: 1;
+		overflow: hidden;
+	}
+	.box div[class^="d"]{
+		position: absolute;
+		background-color: #ccc;
+		height: 100%;
+		top: 0;
+		z-index: 1;
+		overflow: hidden;
+	}
+	.box div[class^="btxt"]{
+		height: 96%;
+		width: 96%;
+		position: absolute;
+		top: 0;
+		left: -104%;
+		background-color: #fa0;
+		padding: 2%;	
+	}
+	.box div[class^="ttxt"]{
+		height: 96%;
+		width: 96%;
+		position: absolute;
+		top: 0;
+		left: 104%;
+		background-color: #eee;
+		padding: 2%;
+	}
+	.dis{
+		display: none;
+	}
+/*box1===============================================*/
+		.box1 .ven{
+			width: 60%;
+			height: 70vh;
+		}
+	/*第一塊===========================================*/
+		.box1 .ven1{
+			width: 100%;
+			height: 64%;
+			position: relative;
+		}
+		.box1 .ven1 .p1{
+			width: 30%;
+			background-image: url(images/011.JPG);
+		}
+		.box1 .ven1 .p2{
+			width: 30%;
+			left: 31%;
+			background-image: url(images/012.JPG);
+		}
+		.box1 .ven1 .txt{
+			width: 38%;
+			left: 62%;
+		}
+	/*第二塊===========================================*/
+		.box1 .ven2{
+			width: 100%;
+			height: 35%;
+			margin-top: 1%;
+			position: relative; 
+		}
+		.box1 .ven2 .d1{
+			width: 38%;
+			right: 0;
+		}
+		.box1 .ven2 .p1{
+			width: 30%;
+			left: 0;
+			background-image: url(images/013.JPG);
+		}
+		.box1 .ven2 .txt{
+			width: 30%;
+			left: 31%;
+		}
+/*box2===============================================*/
+		.box2 .sanM{
+			width: 60%;
+			height: 90vh;
+		}
+	/*第一塊===========================================*/
+		.box2 .sanM1{
+			width: 100%;
+			height: 35%;
+			position: relative;
+		}
+		.box2 .sanM1 .p1{
+			width: 40%;
+			left:0;
+			background-image: url(images/021.JPG);
+		}
+	/*第二塊===========================================*/
+		.box2 .sanM2{
+			width: 100%;
+			height: 30%;
+			margin: 1% auto;
+			position: relative;
+		}
+		.box2 .sanM2 .txt{width: 40%;}
+		.box2 .sanM2 .btxt{height: 94%;}
+		.box2 .sanM2 .ttxt{height: 94%;}
+		.box2 .sanM2 .p1{
+			width: 38%;
+			left: 41%;
+			background-image: url(images/022.JPG);
+		}
+		.box2 .sanM2 .txt1{
+			width: 20%;
+			right: 0;
+		}
+		.box2 .sanM2 .btxt{height: 98%;}
+		.box2 .sanM2 .ttxt{height: 98%;}
+	/*第三塊===========================================*/
+		.box2 .sanM3{
+			width: 100%;
+			height: 33%;
+			position: relative;
+		}
+		.box2 .sanM3 .p1{
+			width: 25%;
+			height: 50%;
+			background-image: url(images/023.JPG);
+			background-position: 50% right;
+		}
+		.box2 .sanM3 .p2{
+			width: 25%;
+			height: 50%;
+			left: 26%;
+			background-image: url(images/024.JPG);
+			background-position: bottom right;
+		}
+		.box2 .sanM3 .p3{
+			width: 16%;
+			left: 52%;
+			background-image: url(images/025.JPG);
+		}
+/*box3===============================================*/
+		.box3{
+			background-image: url(images/030.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.box3 .sanG{
+			width: 60%;
+			height: 70vh;
+		}
+	/*第一塊===========================================*/
+		.box3 .sanG1{
+			width: 100%;
+			height: 30%;
+			position: relative;
+		}
+		.box3 .sanG1 .txt{width: 40%;}
+		.box3 .sanG1 .p1{
+			width: 20%;
+			left:41%;
+			background-image: url(images/033.JPG);
+		}
+		.box3 .sanG1 .d1{
+			width: 17%;
+			right: 21%;
+		}
+		.box3 .sanG1 .p2{
+			width: 20%;
+			right: 0;
+			background-image: url(images/034.JPG);
+		}
+	/*第二塊===========================================*/
+		.box3 .sanG2{
+			width: 100%;
+			height: 69%;
+			margin-top: 1%;
+			position: relative;
+		}
+		.box3 .sanG2 .txt{
+			width: 40%;
+			height: 58%;
+			right: 0;
+		}
+		.box3 .sanG2 .p1{
+			width: 40%;
+			right: 41%;
+			background-image: url(images/031.JPG);
+		}
+		.box3 .sanG2 .p2{
+			width: 30%;
+			height: 40%;
+			background-image: url(images/032.JPG);
+			position: relative;
+			left: 60%;
+			top: 60%;
+		}
+/*box4===============================================*/
+		.box4 .mar{
+			width: 50%;
+			height: 70vh;
+		}
+	/*第一塊===========================================*/
+		.box4 .mar1{
+			width: 100%;
+			height: 44%;
+			position: relative;
+		}
+		.box4 .mar1 .p1{
+			width: 60%;
+			background-image: url(images/041.JPG);
+		}
+		.box4 .mar1 .txt{
+			width: 39%;
+			right: 0;
+		}	
+	/*第二塊===========================================*/
+		.box4 .mar2{
+			width: 100%;
+			height: 55%;
+			position: relative;
+			margin-top: 1%; 
+		}
+		.box4 .mar2 .p1{
+			width: 30%;
+			background-image: url(images/042.JPG);
+
+		}
+		.box4 .mar2 .p2{
+			width: 29%;
+			left: 31%;
+			background-image: url(images/043.JPG);
+		}
+		.box4 .mar2 .p3{
+			width: 39%;
+			right: 0;
+			background-image: url(images/044.JPG);
+		}
+/*box5===============================================*/
+		.box5{
+			background-image: url(images/050.png);
+			background-repeat: no-repeat;
+			background-size: 100vh;
+		}
+		.box5 .bur{
+			width: 60%;
+			height: 90vh;
+		}
+	/*第一塊===========================================*/
+		.box5 .bur1{
+			width: 100%;
+			height: 40%;
+			position: relative;
+		}
+		.box5 .bur1 .p1{
+			width: 25%;
+			height: 187%;
+			background-image: url(images/051.JPG);
+		}
+	/*第二塊===========================================*/
+		.box5 .bur2{
+			width: 100%;
+			height: 35%;
+			position: relative;
+		}
+		.box5 .bur2 .p1{
+			width: 25%;
+			height: 49%;
+			right: 49%;
+			background-image: url(images/052.JPG);
+		}
+		.box5 .bur2 .p2{
+			width: 25%;
+			height: 49%;
+			bottom: 0;
+			right: 49%;
+			top: 52%;
+			background-image: url(images/053.JPG);
+		}
+		.box5 .bur2 .txt{
+			width: 48%;
+			right: 0;
+		}
+		.box5 .bur2 .btxt{height: 94%;}
+		.box5 .bur2 .ttxt{height: 94%;}
+	/*第三塊===========================================*/
+		.box5 .bur3{
+			width: 100%;
+			height: 19%;
+			margin-top: 1%;  
+			position: relative;
+		}
+		.box5 .bur3 .p1{
+			width: 25%;
+			bottom: 0;
+			right: 49%;
+			background-image: url(images/054.JPG);
+		}
+
+
+@media only screen and (max-width:767px){
+
+	div{
+		/*outline: 1px solid #000;*/
+	}
+	/*controller===========================================*/
+		.controller li{
+			height: 5vw;
+			width: 5vw;
+		}
+		.controller a{
+			width: 4vw;
+			height: 4vw;
+		}
+	/*main區塊設定======================================*/
+		h2{
+			font-size: 5vh;
+			line-height: 1.5em;
+		}
+		h4{
+			font-size: 4vh;
+			line-height: 1.5em;
+		}
+		p{
+			font-size: 2vh;
+			line-height: 1.5em;
+			margin: 1% auto;
+		}
+		.box1, .box2, .box4, .box5{
+			width: 100%;
+			height: 300vh;
+		}
+		.box .main{
+			width: 100%;
+			height: 90%;
+		}		
+		.box div[class^="txt"]{
+			width: 100%;
+			position: absolute;
+		}
+		.box div[class^="p"]{
+			width: 100%;
+			position: absolute;
+			/*top: 0;*/
+			z-index: 0;
+		}
+/*box1第一塊===========================================*/
+		.box1 .ven1{
+			width: 100%;
+			height: 65%;
+			position: relative;
+		}
+		.box1 .ven1 .p1{
+			width: 100%;
+			height: 29%;
+		}
+		.box1 .ven1 .p2{
+			left: 31%;
+			height: 29%;
+			width: 100%;
+			left: 0;
+			top: 71%;
+			background-size: 50%;
+		}
+		.box1 .ven1 .txt{
+			width: 100%;
+			height: 40%;
+			left: 0;
+			top: 30%;
+		}
+		.box1 .ven1 .btxt{
+			height: 98%;
+		}
+		.box1 .ven1 .ttxt{
+			height: 98%;
+		}
+	/*第二塊===========================================*/
+		.box1 .ven2{
+			width: 100%;
+			height: 35%;
+			position: relative; 
+		}
+		.box1 .ven2 .d1{
+			display: none;
+		}
+		.box1 .ven2 .p1{
+			width: 100%;
+			height: 50%;
+			left: 0;
+			top: 1%;	
+		}
+		.box1 .ven2 .txt{
+			width: 100%;
+			height: 48%;
+			left: 0;
+			top: 53%;
+		}
+/*box2第一塊===========================================*/
+		.box2 .sanM1{
+			width: 100%;
+			height: 20%;
+			position: relative;
+		}
+		.box2 .sanM1 .p1{
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left:0;
+		}
+	/*第二塊===========================================*/
+		.box2 .sanM2{
+			width: 100%;
+			height: 60%;
+			position: relative;
+		}
+		.box2 .sanM2 .txt{
+			height: 17%;
+			width: 100%;
+			left: 0;
+			top: 1%;
+		}
+		.box2 .sanM2 .btxt{height: 94%;}
+		.box2 .sanM2 .ttxt{height: 94%;}
+		.box2 .sanM2 .p1{
+			width: 100%;
+			height: 50%;
+			left: 0;
+			background-image: url(images/025.JPG);
+			top: 19%;
+		}
+		.box2 .sanM2 .txt1{
+			width: 100%;
+			height: 18%;
+			left: 0;
+			top: 70%;	
+		}
+		.box2 .sanM2 .btxt{height: 98%;}
+		.box2 .sanM2 .ttxt{height: 98%;}
+	/*第三塊===========================================*/
+		.box2 .sanM3{
+			width: 100%;
+			height: 20%;
+		}
+		.box2 .sanM3 .p1{
+			width: 39%;
+			height: 48%;
+			left: 61%;
+		}
+		.box2 .sanM3 .p2{
+			width: 39%;
+			height: 48%;
+			left: 61%;
+			top: 51%;
+		}
+		.box2 .sanM3 .p3{
+			height: 100%;
+			width: 59%;
+			background-image: url(images/022.JPG);
+			left: 0;
+		}
+/*box3第一塊===========================================*/
+		.box3{
+			width: 100%;
+			height: 200vh;
+		}
+		.box3 .sanG1{
+			width: 100%;
+			height: 50%;
+		}
+		.box3 .sanG1 .txt{
+			width: 100%;
+			height: 50%;
+			top: 32%;
+		}
+		.box3 .sanG1 .p1{
+			width: 35%;
+			height: 30%;
+			left:2%;
+		}
+		.box3 .sanG1 .d1{
+			display: none;
+		}
+		.box3 .sanG1 .p2{
+			width: 35%;
+			height: 30%;
+			left: 39%;
+		}
+	/*第二塊===========================================*/
+		.box3 .sanG2{
+			width: 100%;
+			height: 49%;
+		}
+		.box3 .sanG2 .txt{
+			width: 100%;
+			height: 50%;
+			top: 51%;
+			left: 0;
+		}
+		.box3 .sanG2 .p1{
+			width: 100%;
+			height: 49%;
+			left: 0;
+			background-size: 60%;
+		}
+		.box3 .sanG2 .p2{
+			display: none;
+		}
+/*box4第一塊===========================================*/
+		.box4{
+			width: 100%;
+			height: 200vh;
+		}
+		.box4 .mar1{
+			width: 100%;
+			height: 70%;
+		}
+		.box4 .mar1 .p1{
+			height: 50%;
+			width: 100%;
+		}
+		.box4 .mar1 .txt{
+			height: 49%;
+			width: 100%;
+			top: 51%;
+		}	
+	/*第二塊===========================================*/
+		.box4 .mar2{
+			width: 100%;
+			height: 29%;
+		}
+		.box4 .mar2 .p1{
+			width: 30%;
+			background-image: url(images/042.JPG);
+
+		}
+		.box4 .mar2 .p2{
+			width: 29%;
+			left: 31%;
+			background-image: url(images/043.JPG);
+		}
+		.box4 .mar2 .p3{
+			width: 39%;
+			right: 0;
+			background-image: url(images/044.JPG);
+		}
+/*box5第一塊===========================================*/
+		.box5{
+			width: 100%;
+			height: 100vh;
+		}
+		.box5 .bur1{
+			width: 100%;
+			height: 0;
+			display: none;
+		}
+	/*第二塊===========================================*/
+		.box5 .bur2{
+			width: 100%;
+			height: 60%;
+		}
+		.box5 .bur2 .p1{
+			width: 50%;
+			height: 49%;
+			background-image: url(images/054.JPG);
+			left: 0;
+		}
+		.box5 .bur2 .p2{
+			width: 50%;
+			height: 49%;
+			left: 0;
+			top: 51%;
+		}
+		.box5 .bur2 .txt{
+			width: 49%;
+			height: 103%;
+			right: 0;
+		}
+		.box5 .bur2 .btxt{height: 94%;}
+		.box5 .bur2 .ttxt{height: 94%;}
+	/*第三塊===========================================*/
+		.box5 .bur3{
+			width: 100%;
+			height: 39%;
+		}
+		.box5 .bur3 .p1{
+			width: 90%;
+			height: 90%;
+			left: 0;
+			right: 0;
+			margin: auto;
+			background-image: url(images/052.JPG);
+		}
+	</style>
+</head>
+<body>
+<!-- entrance============================================= -->
+	<div class="block entrance">
+		<video playsinline autoplay muted loop poster="images/000.JPG" id="bgvid">
+			<source src="images/IMG 4057.mp4" type="video/mp4">
+		</video>
+		<h1>A TRIP TO VENICE</h1>
+		<a href="javascript:;">START →</a>
+	</div>
+<!-- box===================================================== -->
+	<div class="box pp box0">
+		<div class="mapp">
+			<div class="mappp">
+				<a href="javascript:;" class="timme">Schedule</a>
+			</div>
+			<ul>
+				<li class="ink1"><a href="javascript:;" class="link1">VENICE</a></li>
+				<li class="ink2"><a href="javascript:;" class="link2">SAN MARCO</a></li>
+				<li class="ink3"><a href="javascript:;" class="link3">SAN GIORGIO MAGGIORE</a></li>
+				<li class="ink4"><a href="javascript:;" class="link4">MURANO</a></li>
+				<li class="ink5"><a href="javascript:;" class="link5">BURANO</a></li>
+			</ul>
+		</div>
+		<div class="block schedule">
+			<div class="secc">
+				<a href="javascript:;" class="timme">← BACK</a>
+			</div>
+			<div class="mennn">
+				<div class="menu">
+					<ul class="trip">
+						<li>
+							<div class="ttt1"><div class="ss1"></div></div>
+							<a href="javascript:;" class="trip1">S.Lucia</a></li>
+						<li>
+							<div class="ttt2"><div class="ss2"></div></div>
+							<a href="javascript:;" class="trip2">Piazza San Marco</a></li>
+						<li>
+							<div class="ttt3"><div class="ss3"></div></div>
+							<a href="javascript:;" class="trip3">Palazzo Ducale</a></li>
+						<li>
+							<div class="ttt4"><div class="ss4"></div></div>
+							<a href="javascript:;" class="trip4">Lunch</a></li>
+						<li>
+							<div class="ttt5"><div class="ss5"></div></div>
+							<a href="javascript:;" class="trip5">San Giorgio Maggiore</a></li>
+						<li>
+							<div class="ttt6"><div class="ss6"></div></div>
+							<a href="javascript:;" class="trip6">Murano</a></li>
+						<li>
+							<div class="ttt7"><div class="ss7"></div></div>
+							<a href="javascript:;" class="trip7">Burano</a></li>
+						<li>
+							<div class="ooo8"><div class="oo8"></div></div>
+							<a href="javascript:;" class="trip8">Sunset</a></li>
+						<li>
+							<div class="ttt9"><div class="ss9"></div></div>
+							<a href="javascript:;" class="trip9">Dinner</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="boxx">
+<!-- controller============================================== -->
+	<div class="controller">
+		<ul>
+			<li><a href="javascript:;" class="name"></a></li>
+			<li><a href="javascript:;" class="namev"></a></li>
+			<li><a href="javascript:;" class="namep"></a></li>
+			<li><a href="javascript:;" class="names"></a></li>
+			<li><a href="javascript:;" class="namem"></a></li>
+			<li><a href="javascript:;" class="nameb"></a></li>
+		</ul>
+<!-- ========================================================== -->
+	</div>
+	<div class="box pp box1">
+		<div class="main ven">
+			<div class="ven1">
+				<div class="p1"></div>
+				<div class="p2"></div>
+				<div class="txt">
+					<h2>Venice</h2>
+					<p>Venice is a city in northeastern Italy and the capital of the Veneto region. It is situated across a group of 117 small islands that are separated by canals and linked by bridges. Parts of Venice are renowned for the beauty of their settings, their architecture, and artwork. The lagoon and a part of the city are listed as a World Heritage Site.</p>
+					<p>Venice is a city of small islands, enhanced during the Middle Ages by the dredging of soils to raise the marshy ground above the tides. The resulting canals encouraged the flourishing of a nautical culture which proved central to the economy of the city. Today those canals still provide the means for transport of goods and people within the city.</p>
+				<div class="btxt dis"></div>
+				<div class="ttxt">
+					<h2>威尼斯</h2>
+					<p>威尼斯市區涵蓋義大利東北部亞得里亞海沿岸的威尼斯潟湖的118個島嶼和鄰近一個半島。</p>
+					<p>威尼斯曾經是威尼斯共和國的中心，十字軍進行十字軍東征時也曾在這裡集結，而且也是13世紀至17世紀末一個非常重要的商業（尤其是香料貿易、糧食與毛皮貿易）與藝術重鎮。</p>
+					<p>威尼斯的水道舉世知名。潟湖上的118座群島約由150條水道交織而成。構成威尼斯的島嶼約擁有400座橋樑。在古老的城市中心，運河取代了公路的功能，所以主要的交通模式是步行與水上交通。中心舊市區街道狹窄，為步行區，是歐洲最大的無汽車地區。在21世紀，這座無車都市是相當獨特的。目前聖塔露西亞車站則是威尼斯唯一的鐵路車站。</p>
+				</div>	
+				</div>			
+			</div>
+			<div class="ven2">
+				<div class="d1"></div>
+				<div class="p1"></div>
+				<div class="txt">
+					<h4>Gondola</h4>
+					<p>For centuries the gondola was the chief means of transportation and most common watercraft within Venice. Their primary role today, however, is to carry tourists on rides at fixed rates.</p>
+					<div class="btxt dis"></div>
+					<div class="ttxt">
+						<h4>貢多拉</h4>
+						<p>貢多拉是威尼斯最具代表性和道統的水上代步小船。但現今威尼斯人通常會使用較為經濟的水上巴士（vaporetti）穿行市內主要水道和威尼斯的其他小島。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box pp box2">
+		<div class="main sanM">
+			<div class="sanM1">
+				<div class="p1"></div>
+			</div>
+			<div class="sanM2">
+				<div class="txt">
+					<h2>Piazza San Marco</h2>
+					<p>Piazza San Marcois the principal public square of Venice. The two spaces together form the social, religious and political centre of Venice and are commonly considered together. This article relates to both of them.</p>
+					<div class="btxt dis"></div>
+					<div class="ttxt">
+						<h2>聖馬可廣場</h2>
+						<p>在威尼斯，聖馬可廣場是唯一被稱為「Piazza」的廣場，其他的廣場無論大小皆被稱為「Campi」。聖馬可廣場在歐洲城市的廣場中是獨一無二的，它座落在市中心，卻不像其他廣場那樣受到交通的喧鬧，這歸功於威尼斯寧靜的水路交通。</p>
+					</div>
+				</div>
+				<div class="p1"></div>
+				<div class="txt1">
+					<h4>Rialto Bridge</h4>
+					<p>The Rialto Bridge is one of the four bridges spanning the Grand Canal in Venice. It is the oldest bridge across the canal, and was the dividing line for the districts of San Marco and San Polo.</p>
+					<div class="btxt dis"></div>
+					<div class="ttxt">
+						<h4>嘆息橋</h4>
+						<p>嘆息橋是密封式拱橋建築，由內向外望只能通過橋上的小窗子，兩端連接法院與監獄兩處，死囚通過此橋之時，常是行刑前的一刻，因感嘆即將結束的人生而得名。</p>
+					</div>
+				</div>
+			</div>
+			<div class="sanM3">
+				<div class="p1"></div>
+				<div class="p2"></div>
+				<div class="p3"></div>
+			</div>
+		</div>
+	</div>
+	<div class="box pp box3">
+		<div class="main sanG">
+			<div class="sanG1">
+				<div class="txt">
+					<h2>San Giorgio Maggiore</h2>
+					<p>San Giorgio Maggiore is one of the islands of Venice, is now the headquarters of the Cini Foundation arts centre, known for its library and is also home to the Teatro Verde open-air theatre.</p>
+					<div class="btxt dis"></div>
+					<div class="ttxt">
+						<h2>聖喬治·馬焦雷島</h2>
+						<p>聖喬治·馬焦雷島是義大利威尼斯的一座島嶼，位於主要島群的南方。從聖喬治馬焦雷教堂的鐘樓上看出去，能從高處一覽威尼斯本島以及聖馬可廣場的全貌。</p>
+					</div>
+				</div>
+				<div class="p1"></div>
+				<div class="d1"></div>
+				<div class="p2"></div>
+			</div>
+			<div class="sanG2">
+				<div class="p1"></div>
+				<div class="txt">
+					<h4>San Giorgio Maggiore</h4>
+					<p>San Giorgio Maggiore is a 16th-century Benedictine church, designed by Andrea Palladio, and built between 1566 and 1610. The church is a basilica in the classical renaissance style and its brilliant white marble gleams above the blue water of the lagoon opposite the Piazzetta and forms the focal point of the view from every part of the Riva degli Schiavoni.</p>
+					<div class="btxt dis"></div>
+					<div class="ttxt">
+						<h4>聖喬治馬焦雷教堂</h4>
+						<p>聖喬治馬焦雷教堂是義大利威尼斯一座教堂，位於聖喬治·馬焦雷島上，由義大利文藝復興時期的知名建築師安德烈·帕拉迪歐（Andrea Palladio）所設計。因為面對著聖馬可地區，所以從聖馬可廣場可以清楚的眺望聖喬治馬焦雷教堂的全景。</p>
+					</div>
+				</div>
+				<div class="p2"></div>
+			</div>
+		</div>
+	</div>
+	<div class="box pp box4">
+		<div class="main mar">
+			<div class="mar1">
+				<div class="p1"></div>
+				<div class="txt">
+					<h2>Murano</h2>
+					<p>Murano is a series of islands linked by bridges in the Venetian Lagoon, northern Italy.It is famous for its glass making. It was once an independent comune, but is now a frazione of the comune of Venice.</p>
+					<div class="btxt dis"></div>
+					<div class="ttxt">
+						<h2>穆拉諾島</h2>
+						<p>穆拉諾是義大利威尼斯潟湖中的一個島，以製造色彩斑斕的穆拉諾玻璃器皿而聞名於世。</p>
+						<p>1291年威尼斯共和國擔心玻璃廠的爐火會引起布滿木屋的威尼斯城發生火災，下令威尼斯的所有玻璃廠遷往穆拉諾，從此奠定作穆拉諾成為七彩玻璃製造業的中心。14世紀時，穆拉諾開始出口玻璃製品，以其玻璃珠、玻璃鏡子和玻璃吊燈聞名。</p>
+					</div>
+				</div>
+			</div>
+			<div class="mar2">
+				<div class="p1"></div>
+				<div class="p2"></div>
+				<div class="p3"></div>
+			</div>
+		</div>
+	</div>
+	<div class="box pp box5">
+		<div class="main bur">
+			<div class="bur1">
+				<div class="p1"></div>
+			</div>
+			<div class="bur2">
+				<div class="p1"></div>
+				<div class="p2"></div>
+				<div class="txt">
+					<h2>Burano</h2>
+					<p>Burano is an island in the Venetian Lagoon, northern Italy; like Venice itself, it could more correctly be called an archipelago of four islands linked by bridges. It is known for its lace work and brightly coloured homes.</p>
+					<h4>Main sights</h4>
+					<p>Burano is also known for its small, brightly painted houses, which are popular with artists. The colours of the houses follow a specific system originating from the golden age of its development.</p>
+					<div class="btxt dis"></div>
+					<div class="ttxt">
+						<h2>布拉諾島</h2>
+						<p>布拉諾島是義大利威尼斯潟湖上的島嶼，以蕾絲紡織聞名於世，從威尼斯搭船需花費40分鐘才能抵達。</p>
+						<p>布拉諾島上色彩繽紛的房屋的顏色並非當地居民隨興決定的，而是遵循著特定的系統，如果有人要油漆，要先跟政府單位申請，然後政府單位會回覆一些參考色，而居民們僅能漆上被允許的色彩。</p>
+					</div>
+				</div>
+			</div>
+			<div class="bur3">
+				<div class="p1"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+// 入口===============================================
+	$('.entrance a').click(function(){
+		$('.entrance').fadeOut('slow');
+		$('.box').removeClass('pp');
+	})
+// 首頁===============================================
+	var vw = $(window).width()*5;
+	$('.mappp a').click(function(){
+		$('.schedule').animate({left:0},1000);
+		$('.mapp').animate({left:vw},1000);
+	})
+
+	$('.secc a').click(function(){
+		$('.schedule').animate({left:vw},1000);
+		$('.mapp').animate({left:0},1000);
+	})
+// 導覽列===============================================
+	var vh_index = 0;
+	var vh = 0;
+	$('.controller li').click(function(){
+		vh_index = $(this).index();
+		vh = $('.box').eq(vh_index).offset().top;
+		$('html,body').stop(true,false).animate({scrollTop: vh});
+	})
+	$('.controller li').hover(function(){
+		$(this).find('a').addClass('cona');
+	}, function(){
+		$(this).find('a').removeClass('cona');
+	})
+
+
+	$('.mapp li').click(function(){
+		vh_index = $(this).index();
+		vh = $('.box').eq(vh_index+1).offset().top;
+		$('html,body').stop(true,false).animate({scrollTop: vh});
+	})
+// 文字方塊===========================================
+	var wd = $('.box .txt').width();
+	$('.box .txt').hover(function(){
+		wd = $('.box .txt').width()
+		$(this).find('.btxt').removeClass('dis').stop(true,false).animate({left:0},500);
+		$(this).find('.ttxt').stop(true,false).animate({left:0},1000);
+	}, function(){
+		$(this).find('.ttxt').stop(true,false).animate({left:wd+100},1000);
+		$(this).find('.btxt').stop(true,false).animate({left:-(wd+100)},500);		
+	})
+	
+	$('.box2 .sanM2 .txt1').hover(function(){
+		wd = $('.box .txt').width();
+		$(this).find('.btxt').removeClass('dis').stop(true,false).animate({left:0},500);
+		$(this).find('.ttxt').stop(true,false).animate({left:0},1000);
+	}, function(){
+		$(this).find('.ttxt').stop(true,false).animate({left:wd},1000);
+		$(this).find('.btxt').stop(true,false).animate({left:-wd},500);		
+	})
+// ========================================================
+})
+</script>
+</body>
+</html>
