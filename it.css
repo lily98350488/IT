@@ -1,0 +1,1110 @@
+
+		body{
+			overflow-x: hidden;
+		}
+		.pp{
+			display: none;
+		}
+		.block{
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			outline: 1px solid #f00;
+			/*display: none;*/
+			overflow: hidden;
+		}
+		.box{
+			width: 100%;
+			float: left;
+			outline: 1vh solid #000;
+			
+		}
+		
+/*入口===============================================*/
+		.entrance_aling:before{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			width: 0px;
+			background-color: #0f0;
+		}
+		.entrance_aling{
+			height: 100%;
+			width: 100%;
+			text-align: center;
+		}
+		.entrance{			
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.entrance h1{
+			color: #fff;
+			text-align: center;
+			width: 100%;
+			font-family: 'Ubuntu Condensed', sans-serif;
+			font-size: 18vw;
+			line-height: 20vw;
+			margin: 10% auto;
+		}
+		.entrance a{
+			color: #fff;
+			border: 1vw solid #fff;
+			border-radius: 5vw;
+			display: block;
+			height: 8vw;	
+			width: 30vw;
+			text-align: center;
+			line-height: 8vw;
+			margin: 20% auto;
+			left: 0;
+			right: 0;
+		}
+		#bgvid { 
+			z-index: -3;
+			/*width: 100%;*/
+    		/*height: 100%;*/
+    		/*max-width: 100%;*/
+    		min-height: 100%;
+		    position: fixed;
+		    bottom: 0;
+		    left: 0%;
+		    background: url(images/000.JPG) no-repeat;
+		    background-size: cover; 
+		    background-position: center;
+		}
+/*controller===========================================*/
+
+	.box_control{
+		width: 100vw;
+		height: 100vh;
+		background-attachment: fixed;
+	}
+	.boxx{
+		float: left;
+		height: auto;
+		z-index: 1;
+		position: absolute;
+		top: 100vh;
+	}
+	.controller{
+		position: fixed;
+		right: 5%;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: 51vw;z-index: 3;
+	}
+	.controller li{
+		height: 4vw;
+		width: 4vw;
+		margin: 4vw 0;
+		text-align: center;
+		border-radius: 50%;
+		background-color: #000;
+		transition: .5s;
+		font-size: 3vw;
+		color: #fff;
+		line-height: 4vw;
+		text-align: center;
+		cursor: pointer;
+	}
+	.cona{	
+		transform: scale(.5);
+	}
+/*box0================================================*/
+	.box0 .timme {
+		animation: blin 1s infinite alternate;		
+		}
+	.box0{
+		background-image: url(images/s002.PNG);
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+		height: 100vh;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 5;
+	}
+	/*map==================================================*/
+		.box0 .mapp .timme{
+			display: block;
+			width: 20vw;
+			height: 20vw;
+			position: absolute;
+			border-radius: 50%;
+			font-size: 5vw;
+			line-height: 20vw;
+			text-align: center;
+			background-color: #000;
+			color: #fff;
+			left: 5%;
+			bottom: 15%;
+		}
+		.box0 .mapp{
+			height: 100%;	
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: rgba(0, 0, 0, .6);
+		}
+		.map_img{
+			height: 100%;
+			width: 68vh;
+			max-width: 100%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.map_img img{
+			max-height: 100%;
+			max-width: 100%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		@keyframes blin{
+			0%{box-shadow: 0px 0px 3vw .3vw #fa0;}
+			100%{box-shadow: 0px 0px 2vw .2vw #fa0;}
+		}
+		.box0 .mapp li a{
+			display: inline-block;
+			width: 10vh;
+			height: 10vh;
+			color: #fff;
+			text-align: center;
+			line-height: 3.6vh;
+			font-size: 3vh;
+			font-family: 'Ubuntu Condensed';
+			background-color: rgba(0, 0, 0, .6);
+			border-radius: 50%;
+		}
+		.box0 .mapp li a:after{
+			content: '';
+			display: block;
+			height: 0;
+			width: 0;
+			border-top: 2vh solid #fff;
+			border-left: 1vh solid transparent;
+			border-right: 1vh solid transparent;
+			margin: 10% auto;
+		}
+		.box0 .mapp li .link1{
+			position: absolute;
+			top: 12%;
+			left: 26%;
+			padding: 1.6vh 1vh .4vh 1vh;
+			color: #E6AF2E;
+			width: 10vh;
+			height: 10vh;
+		}
+		.box0 .mapp li .link1:after{
+			border-top: 2vh solid #E6AF2E; 
+		}
+		.box0 .mapp li .link2{
+			position: absolute;
+			top: 20%;
+			left: 15%;
+			padding: .2vh 1vh 1.8vh 1vh;;
+		}
+		.box0 .mapp li .link3{
+			position: absolute;
+			top: 28%;
+			left: 5%;
+			padding: .6vh 1vh 1.4vh 1vh;
+			width: 12vh;
+			height: 12vh;
+		}
+		.box0 .mapp li .link4{
+			position: absolute;
+			top: 35%;
+			left: 45%;
+			padding: 1.4vh 1vh .6vh 1vh;
+		}
+		.box0 .mapp li .link5{
+			position: absolute;
+			top: 75%;
+			left: 80%;
+			padding: 1.4vh 1vh .6vh 1vh;
+		}
+		.box0 .mapp li a:hover{
+			animation: ink .8s infinite alternate;
+		}
+		@keyframes ink{
+			0%{transform: scale(1);}
+			100%{transform: scale(.8);}
+		}
+	/*schedule==================================================*/
+		.box0 .schedule{
+			background-color: rgba(255, 255, 255, .4);
+			position: absolute;
+			left: 100%;
+			height: 100%;	
+			width: 100%;
+		}
+		.schedule .mennn{
+			position: relative;
+			width: 100%;
+			height: 90%;
+			text-align: center;
+		}
+		.schedule .mennn:before{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			width: 0px;
+			background-color: #0f0;
+		}
+		.schedule .menu{
+			display: inline-block;
+			vertical-align: middle;
+			width: 90vw;
+			height: auto;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.schedule .menu li{
+			display: block;
+			width: 30vw;
+			height: 20vw;
+			position: relative;
+			float: left;
+			margin-bottom: 4vw;
+		}
+		.schedule .menu li div[class^="ttt"]{
+			width: 20vw;
+			height: 20vw;
+			border-radius: 50%;
+			position: absolute;
+			background-color: #e3b23c;
+			top: 0;
+			right: 0;
+		}
+		.schedule .menu li .ooo8{
+			width: 16vw;
+			height: 16vw;
+			top: 2vw;
+			right: 2vw;
+			background-color: #e3b23c;
+			border-radius: 50%;
+			position: absolute;
+		}
+		.schedule .menu li .ooo8{background-image:url(images/t8.png); background-position:50% 50%;}
+		.schedule .menu li a{
+			display: block;
+			width: 20vw;
+			height: 16vw;
+			position: absolute;
+			right: 0;
+			top: 0;
+			color: #000;
+			font-size:4vw;
+			text-align: center; 
+			padding-top: 4vw;
+			line-height: 9vw;
+			font-family: 'Ubuntu Condensed', sans-serif;
+			cursor: default;
+		}
+		.box0 .schedule .timme {
+			height: 20vw;
+			padding-top: 0;
+			border-radius: 50%;
+			font-size: 5vw;
+			line-height: 20vw;
+			text-align: center;
+			background-color: #000;
+			color: #fff;
+			animation: blin 1s infinite alternate;
+			cursor: pointer;
+		}
+		.box0 .schedule .timme:before{
+			display: none;
+		}
+		.schedule .menu li .trip2, .schedule .menu li .trip3, .schedule .menu li .trip5{
+			line-height: 4vw;
+		}
+		.schedule .menu li .trip4, .schedule .menu li .trip9{
+			line-height: 12vw;
+			font-size: 4vw;
+		}
+		.schedule .menu li .trip8{
+			width: 16vw;
+			height: 16vw;
+			right: 2vw;
+			top: 2vw;
+			padding-top: 0;
+			text-align: center;
+			line-height: 15vw;
+		}
+		.schedule .menu li a:before{
+			content: '';
+			display: block;
+			height: 9.5vw;
+			width: 10vw; 
+			border-bottom: 1vw solid #000;
+			position: absolute;
+			left: -10vw;
+			top: 0;
+			text-align: center;
+			color: #000;
+			font-size: 4vw;
+			font-weight: bold;
+			line-height: 14vw;
+			font-family:'Abel';
+		}
+		.schedule .menu li .trip1:before{content: '8:00';}
+		.schedule .menu li .trip2:before{content: '9:00';}
+		.schedule .menu li .trip3:before{content: '10:00';}
+		.schedule .menu li .trip4:before{content: '12:00';}
+		.schedule .menu li .trip5:before{content: '13:00';}
+		.schedule .menu li .trip6:before{content: '14:00';}
+		.schedule .menu li .trip7:before{content: '16:00';}
+		.schedule .menu li .trip8:before{
+			left: -12vw;
+			width: 12vw;
+			height: 7.5vw
+		}
+		.schedule .menu li .trip9:before{ 
+			content: '18:00';
+			left: -12vw;
+			width: 12vw;
+		}
+		.schedule .menu li .trip2:after, .schedule .menu li .trip3:after, .schedule .menu li .trip5:after{
+			top: 12vw;
+			line-height: 3.2vw;
+		}
+		.menu li a:after{
+			content: '';
+			display: block;
+			width: 14vw; 
+			position: absolute;
+			top: 8vw;
+			left: 3vw;
+			text-align: center;
+			color: #000;
+			font-size: 2.8vw;
+			font-family:'微軟正黑體';
+		}
+		.schedule .menu li .trip1:after{content: '車站';}
+		.schedule .menu li .trip2:after{content: '聖馬可廣場';}
+		.schedule .menu li .trip3:after{content: '總督宮';}
+		.schedule .menu li .trip5:after{content: '聖喬治·馬焦雷島';}
+		.schedule .menu li .trip6:after{content: '玻璃島';}
+		.schedule .menu li .trip7:after{content: '彩虹島';}
+/*main區塊設定======================================*/
+	h2{
+		font-size: 8vw;
+		font-weight: bold;
+	}
+	h4{
+		font-size: 6vw;
+		line-height: 6vw;
+	}
+	p{
+		font-size: 4.2vw;
+		line-height: 6vw;
+		margin-top: 2vh;
+	}
+	.box .main img{
+		width: 100%;
+		max-width: 100%;
+	}		
+	.box div[class^="txt"]{
+		width: 90%;
+		float: left;
+		padding: 5vh 5% ;
+
+	}
+	.box div[class^="p"] {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+	}
+	.box div[class^="d"]{
+		
+	}
+	.box div[class^="btxt"]{
+
+	}
+	.box div[class^="ttxt"]{
+
+	}
+	.dis{
+		display: none;
+	}
+
+/*box1===============================================*/
+		.box1{
+			float: left;
+		}
+	/*第一塊===========================================*/
+		.box .ven2{
+			float: left;
+		}
+		.box1 .ven1 .p1 {
+			margin-top: 10vh;
+			height: 400px;
+		}
+		.box1 .ven1 .p1 img{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+		}
+		.box1 .ven1 .p2{
+			display: none;
+		}
+/*box2===============================================*/
+	/*第一塊===========================================*/
+	/*第二塊===========================================*/
+	/*第三塊===========================================*/
+		.box2 .sanM3 .p1{
+			display: none;
+		}
+		.box2 .sanM3 .p2{
+			display: none;
+		}
+		.box2 .sanM3 .p3{
+			width: 70%;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			margin-bottom: 10vh;
+		}
+/*box3===============================================*/
+		.box3{
+			background-image: url(images/030.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed; 
+		}
+	/*第一塊===========================================*/
+		.box3 .sanG1 .p1{
+			max-width: 90%;
+			left: 0;
+			right: 0;
+			margin: auto auto 5vh auto;
+		}
+		.box3 .sanG1 .p2{
+			max-width: 90%;
+			left: 0;
+			right: 0;
+			margin: auto auto 10vh auto;
+		}
+	/*第二塊===========================================*/
+		.box3 .sanG2 .p1{
+			max-width: 90%;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.box3 .sanG2 .p2{
+			display: none;
+		}
+/*box4===============================================*/
+	/*第一塊===========================================*/
+	/*第二塊===========================================*/
+		.box4 .mar2{
+			width: 90%;
+			left: 5%;
+			float: left;
+			margin-bottom:10vh; 
+			position: relative;
+		}
+		.box4 .mar2 .p1{
+			width: 48%;
+			left: 0;
+		}
+		.box4 .mar2 .p2{
+			width: 48%;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+		}
+		.box4 .mar2 .p3{
+			display: none;
+		}
+/*box5===============================================*/
+		.box5{
+			background-image: url(images/050.png);
+			background-repeat: no-repeat;
+			background-size: 100vh;
+			background-attachment: fixed;
+		}
+	/*第一塊===========================================*/
+		.box5 .bur1 .p1{
+			display: none;
+		}
+	/*第二塊===========================================*/
+		.box5 .bur2 .p1{
+			display: none;
+		}
+		.box5 .bur2 .txt{
+			margin-top: 10vh;
+		}
+	/*第三塊===========================================*/
+		.box5 .bur3 .p1{
+			margin-top: 5vh;
+			margin-bottom:10vh; 
+		}
+
+@media only screen and (min-width:450px){
+	/*入口===============================================*/
+		.entrance h1{
+			font-size: 10vw;
+			line-height: 12vw;
+			margin: 10% auto;
+		}
+		.entrance a{
+			border: .6vw solid #fff;
+			border-radius: 3vw;
+			height: 4.8vw;	
+			width: 18vw;
+			line-height: 4.8vw;
+			margin: 5% auto;
+		}
+	/*schedule==================================================*/
+		.schedule .mennn{
+			height: 100%;
+		}
+		.schedule .menu li{
+			width: 18vw;
+			height: 12vw;
+			margin-top: 0vw;
+		}
+		.schedule .menu li div[class^="ttt"]{
+			width: 12vw;
+			height: 12vw;
+		}
+		.schedule .menu li .ooo8{
+			width: 9.6vw;
+			height: 9.6vw;
+			top: 1.2vw;
+			right: 1.2vw;
+		}
+		.schedule .menu li a{
+			width: 12vw;
+			height: 9.6vw;
+			font-size:2.2vw;
+			padding-top: 2.8vw;
+			line-height: 4vw;
+		}
+		.box0 .schedule .timme {
+			height: 12vw;
+			font-size: 3vw;
+			line-height: 12vw;
+		}
+		.schedule .menu li .trip2, .schedule .menu li .trip3, .schedule .menu li .trip5{
+			line-height: 2.4vw;
+		}
+		.schedule .menu li .trip4, .schedule .menu li .trip9{
+			line-height: 6vw;
+			font-size: 3vw;
+		}
+		.schedule .menu li .trip8{
+			width: 9.6vw;
+			height: 9.6vw;
+			right: 1.2vw;
+			top: 1.2vw;
+			line-height: 9.6vw;
+		}
+		.schedule .menu li a:before{
+			height: 5.6vw;
+			width: 6vw; 
+			border-bottom: .8vw solid #000;
+			left: -6vw;
+			font-size: 2.4vw;
+			line-height: 8vw;
+		}
+		.schedule .menu li .trip8:before{
+			left: -7.2vw;
+			width: 7.2vw;
+			height: 4.4vw
+		}
+		.schedule .menu li .trip9:before{ 
+			left: -7.2vw;
+			width: 7.2vw;
+		}
+		.schedule .menu li .trip2:after, .schedule .menu li .trip3:after, .schedule .menu li .trip5:after{
+			top: 8vw;
+			line-height: 2vw;
+		}
+		.menu li a:after{
+			width: 8vw; 
+			top: 5vw;
+			left: 2vw;
+			font-size: 1.6vw;
+		}
+}
+@media only screen and (min-width:767px){
+	.box{
+			width: 100%;
+			clear: left;
+			outline: .1vh solid #000;
+			
+		}
+	.box1{
+			position: relative;
+			text-align: center;
+		}
+
+/*入口===============================================*/
+		.entrance{			
+			width: 60%;
+		}
+		.entrance h1{
+			font-size: 5vw;
+			line-height: 0vw;
+			margin: 8% auto;
+		}
+		.entrance a{
+			border: .3vw solid #fff;
+			border-radius: 1.5vw;
+			height:2.4vw;	
+			width: 9vw;
+			line-height: 2.4vw;
+		}
+/*controller===========================================*/
+	.boxx{
+		float: left;
+		height: auto;
+		z-index: 1;
+	}
+	.controller{
+		height: 24.5vw;
+	}
+	.controller li{
+		height: 2.5vw;
+		width: 2.5vw;
+		margin: 1.5vw 0;
+		font-size: 2vw;
+		line-height: 2.5vw;
+	}
+/*box0================================================*/
+	.box0{
+		background-image: url(images/s002.PNG);
+		
+		height: 100vh;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 5;
+	}
+	/*map==================================================*/
+		.box0 .mapp{
+			height: 100%;	
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: rgba(0, 0, 0, .6);
+		}
+		.map_img{
+			height: 90%;
+			width: 150vh;
+			max-width: 100%;
+			margin: 5vh auto;
+			background-image: url(images/map.png);
+			background-position: center;
+			background-size: cover;
+		}
+		.map_img img{
+			display: none;
+		}
+		.box0 .mapp li a{
+			line-height: 8vh;
+		}
+		.box0 .mapp li a:after{
+			bottom: 10%;
+			margin: 0 auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+		.box0 .mapp li .link1{
+			top: 59%;
+			left: 20%;
+		}
+		.box0 .mapp li .link2{
+			top: 69%;
+			left: 32%;
+			line-height: 4vh;
+		}
+		.box0 .mapp li .link3{
+			top: 75%;
+			left: 37.5%;
+			line-height: 3.6vh;
+		}
+		.box0 .mapp li .link3:after{
+			bottom: 5%;
+		}
+		.box0 .mapp li .link4{
+			top: 35%;
+			left: 43%;
+		}
+		.box0 .mapp li .link5{
+			top: -4%;
+			left: 85%;
+		}
+/*main區塊設定======================================*/
+	h2{
+		font-size: 2.2vw;
+		font-weight: bold;
+	}
+	h4{
+		font-size: 2.2vw;
+		line-height: 0vw;
+		padding: 1.2vw 0;
+	}
+	p{
+		font-size: 1.4vw;
+		line-height: 1.8vw;
+		margin-top: 2vh;
+	}
+	.box .main{
+		height: auto;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	.box .main img{
+		width: 100%;
+		max-width: 100%;
+	}		
+	.box div[class^="txt"]{
+		width: 100%;
+		padding: 0vh 0% ;
+		text-align: left;
+		position: relative;
+		float: left;
+
+	}
+	.box div[class^="p"] {
+		position: relative;
+		float: left;
+	}
+	.box div[class^="d"]{
+		background-color: #ccc;
+		float: left;
+		position: relative;
+	}
+	.dis{
+		display: none;
+	}
+
+
+
+
+/*box1===============================================*/
+		.box1{
+			clear: left;
+		}
+		.box1 .main{
+			width: 80%;
+		}
+	/*第一塊===========================================*/
+		.box .ven1{
+			margin-top: 5%;
+			width: 100%;
+			float: left;
+		}
+		.box1 .ven1 .p1 {
+			margin-top: 0vh;
+			height: 30vw;
+			width: 30%;	
+		}
+		.box1 .ven1 .p1 img{
+			min-height: 100%;
+		}
+		.box1 .ven1 .p2{
+			display: block;
+			width: 30%;
+			height: 30vw;
+			padding: 0 1%;	
+		}
+		.box1 .ven1 .p2 img{
+			min-height: 100%;
+		}
+		.box1 .ven1 .txt{
+			width: 38%;
+		}
+		.box .ven2{
+			margin: 1% 0 5% 0;
+		}
+		.box .ven2 .p1{
+			width: 30%;
+		}
+		.box1 .ven2 .txt{
+			padding: 2vh 1%;
+			width: 30%;	
+		}
+		.box1 .ven2 .d1{
+			width: 38%;
+			height: 18vw;
+		}
+/*box2===============================================*/
+	.box2 .main{
+			width: 80%;
+		}
+	/*第一塊===========================================*/
+		.box2 .sanM1{
+			width: 100%;
+			float: left;
+		}
+	    .box2 .sanM1 .p1{
+			margin-top: 5vh;
+			height: 20vw;
+		}
+		.box2 .sanM1 .p1{
+			width: 34%;
+		}
+		.box2 .sanM1 .p1 img{
+			min-height: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	/*第二塊===========================================*/
+		.box2 .sanM2{
+			width: 100%;
+			float: left;
+			padding: 1%;
+		}
+		.box2 .sanM2 .txt{
+			width: 34%;
+		}
+		.box2 .sanM2 .txt1{
+			width: 34%;
+			position: relative;
+			float: left;
+			padding: 0;
+		}
+		.box2 .sanM2 .p1{
+			width: 30%;
+			margin: 0 1%;
+			height: 12vw;
+		}
+		.box2 .sanM2 .p1 img{
+			min-height: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	/*第三塊===========================================*/
+		.box2 .sanM3{
+			width: 100%;
+			float: left;
+		} 
+		.box2 .sanM3 .p1{
+			display: block;
+			width: 24%;
+		}
+		.box2 .sanM3 .p2{
+			display: block;
+			width: 24%;
+			margin: 0 1%;
+
+		}
+		.box2 .sanM3 .p3{
+			width: 16%;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			margin-bottom: 10vh;
+		}
+/*box3===============================================*/
+		.box3{
+			background-image: url(images/030.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed; 
+		}
+		.box3 .main{
+			width: 60%;
+		}
+	/*第一塊===========================================*/
+		.box3 .sanG1{
+			margin-top: 10%;
+			width: 100%;
+			float: left;
+		}
+		.box3 .sanG1 .txt{
+			width: 40%;
+			margin-right: 1%;
+		}
+		.box3 .sanG1 .p1{
+			max-width: 100%;
+			margin: 0;
+			width: 19%;
+			height: 10vw;
+		}
+		.box3 .sanG1 .p1 img{
+			min-height: 100%;
+			margin: 0;
+		}
+		.box3 .sanG1 .p2{
+			display: block;
+			width: 19%;
+			height: 10vw;
+			margin: 0;
+		}
+		.box3 .sanG1 .p2 img{
+			min-height: 100%;
+		}
+		.box3 .sanG1 .d1{
+			margin: 0 1%;
+			height: 10vw;
+			width: 19%;
+		}
+	/*第二塊===========================================*/
+		.box3 .sanG2{
+			width: 100%;
+			float: left;
+			margin:1% 0 10% 0;
+		}
+
+		.box3 .sanG2 .p1{
+			max-width: 39%;
+			margin: 0 1% 0 0;
+		}
+		.box3 .sanG2 .txt{
+			width: 60%;
+			margin-bottom: 1%;
+		}
+
+		.box3 .sanG2 .p2{
+			display: block;
+			width: 18%;
+			max-width: 100%;
+			margin: 0;
+		}
+/*box4===============================================*/
+	.box4 .main{
+			width: 50%;
+			margin-top: 5%;
+		}
+	/*第一塊===========================================*/
+		.box4 .mar1{
+			width: 100%;
+			float: left;
+		}
+		.box4 .mar1 .p1{
+			width: 60%;
+			height: 14vw;
+
+		}
+		.box4 .mar1 .p1 img{
+			min-height: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.box4 .mar1 .txt{
+			width: 39%;
+			margin-left: 1%;
+		}
+	/*第二塊===========================================*/
+		.box4 .mar2{
+			margin-top: 1%;
+			width: 100%;
+			left: 0%;
+			float: left;
+			margin-bottom:5%; 
+		}
+		.box4 .mar2 .p1{
+			width: 29.5%;
+		}
+		.box4 .mar2 .p2{
+			width: 29.5%;
+			position: relative;
+			margin: 0 1%;
+		}
+		.box4 .mar2 .p3{
+			display: block;
+			width: 39%;
+			height: 19.5vw;
+		}
+		.box4 .mar2 .p3 img{
+			min-height: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+/*box5===============================================*/
+		.box5{
+			background-image: url(images/050.png);
+			background-repeat: no-repeat;
+			background-size: 100vh;
+			background-attachment: fixed;
+		}
+		.box5 .main{
+			width: 60%;
+			margin-top: 5%;
+		}
+	/*第一塊===========================================*/
+		.box5 .bur1{
+			width: 30%;
+			margin-right: 1%;
+			float: left;
+		}
+		.box5 .bur1 .p1{
+			display: block;
+		}
+	/*第二塊===========================================*/
+		.box5 .bur2{
+			width: 69%;
+			float: right;
+		}
+		.posit_re{
+			position: relative;
+			height: 26.9vw;
+		}
+		.box5 .bur2 .p1{
+			display: block;
+			width: 29%;
+			position: absolute;
+			top: 8.2vw;
+		}
+		.box5 .bur2 .p2{
+			margin-top:0vh; 
+			width: 29%;
+			bottom: 0;
+			position: absolute;
+		}
+		.box5 .bur2 .txt{
+			width: 70%;
+			bottom: auto;
+			bottom: 0;
+			right: 0;
+			margin: 0;
+			position: absolute;
+		}
+	/*第三塊===========================================*/
+		.box5 .bur3{
+			width: 69%;
+			float: right;
+			margin-top: 1%;
+		}
+		.box5 .bur3 .p1{
+			width: 29%;
+			left: 0;
+			right: 0;
+			margin: auto;
+			margin-bottom:5%; 
+		}
+	}
