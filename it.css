@@ -93,11 +93,11 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
-		height: 51vw;z-index: 3;
+		height: 58vw;z-index: 3;
 	}
 	.controller li{
-		height: 4vw;
-		width: 4vw;
+		height: 5vw;
+		width: 5vw;
 		margin: 4vw 0;
 		text-align: center;
 		border-radius: 50%;
@@ -105,7 +105,7 @@
 		transition: .5s;
 		font-size: 3vw;
 		color: #fff;
-		line-height: 4vw;
+		line-height: 5vw;
 		text-align: center;
 		cursor: pointer;
 	}
@@ -130,13 +130,13 @@
 	}
 	.box0:before {
 	  content: ' ';
-	  position: fixed;
+	  position: absolute;
 	  z-index: -1;
 	  top: 0;
 	  right: 0;
 	  bottom: 0;
 	  left: 0;
-	  background: url(path/to/image) center 0 no-repeat;
+	  background: url(images/002.JPG) center 0 no-repeat;
 	  background-size: cover;
 	}
 	/*map==================================================*/
