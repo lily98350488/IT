@@ -16,7 +16,7 @@
 		.box{
 			width: 100%;
 			float: left;
-			border-top: 1vh solid #000;
+			border-bottom: 1vh solid #000;
 			
 		}
 		
@@ -126,7 +126,7 @@
 		top: 0;
 		z-index: 5;
 		overflow: hidden;
-		border: 0px;
+		
 	}
 	.box0:before {
 	  content: ' ';
@@ -565,6 +565,7 @@
 			background-size: 100vh;
 			/*background-attachment: fixed;*/
 			position: relative;
+			border-bottom: 0px;
 		}
 	.box5:before {
 	  content: ' ';
@@ -703,6 +704,7 @@
 			width: 100%;
 			clear: left;
 			outline: .1vh solid #000;
+			border-bottom:0px;
 			
 		}
 	.box1{
