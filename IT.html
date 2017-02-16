@@ -313,6 +313,7 @@ $(function(){
 		$('.block').fadeOut('slow');
 		$('.box').removeClass('pp');
 		$('.box_control').removeClass('pp');
+		$('#bgvid').delay(1500).remove();
 	})
 // 首頁===============================================
 	var vw = $(window).width()*5;
@@ -346,28 +347,6 @@ $(function(){
 		$('html,body').stop(true,false).animate({scrollTop: vh});
 	})
 	
-
-// 文字方塊===========================================
-	// var wd = $('.box .txt').width();
-	// $('.box .txt').click(function(){
-	// 	wd = $('.box .txt').width()
-	// 	$(this).find('.btxt').removeClass('dis').stop(true,false).animate({left:0},500);
-	// 	$(this).find('.ttxt').stop(true,false).animate({left:0},1000);
-	// })
-	// $('.txt .ttxt').click(function(){
-	// 	wd = $('.box .txt').width()
-	// 	$(this).stop(true,false).animate({right:0},1000);
-	// 	$(this).closest('.btxt').stop(true,false).animate({left:-(wd+100)},500);		
-	// })
-	
-	// $('.box2 .sanM2 .txt1').click(function(){
-	// 	wd = $('.box .txt').width();
-	// 	$(this).find('.btxt').removeClass('dis').stop(true,false).animate({left:0},500);
-	// 	$(this).find('.ttxt').stop(true,false).animate({left:0},1000);
-	// }, function(){
-	// 	$(this).find('.ttxt').stop(true,false).animate({left:wd},1000);
-	// 	$(this).find('.btxt').stop(true,false).animate({left:-wd},500);		
-	// })
 // ========================================================
 })
 </script>

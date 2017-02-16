@@ -1,6 +1,6 @@
 
 		body{
-			/*overflow-x: hidden;*/
+			overflow-x: hidden;
 		}
 		.pp{
 			display: none;
@@ -16,7 +16,7 @@
 		.box{
 			width: 100%;
 			float: left;
-			outline: 1vh solid #000;
+			border-top: 1vh solid #000;
 			
 		}
 		
@@ -93,25 +93,24 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
-		height: 58vw;z-index: 3;
+		height: 64vw;
+		z-index: 3;
 	}
 	.controller li{
-		height: 5vw;
-		width: 5vw;
+		height: 6vw;
+		width: 6vw;
 		margin: 4vw 0;
 		text-align: center;
 		border-radius: 50%;
 		background-color: #000;
 		transition: .5s;
-		font-size: 3vw;
+		font-size: 5vw;
 		color: #fff;
-		line-height: 5vw;
+		line-height: 6vw;
 		text-align: center;
 		cursor: pointer;
 	}
-	.cona{	
-		transform: scale(.5);
-	}
+
 /*box0================================================*/
 	.box0 .timme {
 		animation: blin 1s infinite alternate;		
@@ -119,7 +118,7 @@
 	.box0{
 		background-image: url(images/002.JPG);
 		background-position: center;
-		/*background-attachment: fixed;*/
+		background-attachment: fixed;
 		background-size: cover;
 		height: 100vh;
 		position: absolute;
@@ -127,6 +126,7 @@
 		top: 0;
 		z-index: 5;
 		overflow: hidden;
+		border: 0px;
 	}
 	.box0:before {
 	  content: ' ';
@@ -498,8 +498,20 @@
 			background-image: url(images/030.png);
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-attachment: fixed; 
+			/*background-attachment: fixed; */
+			position: relative;
 		}
+		.box3:before {
+	  content: ' ';
+	  position: absolute;
+	  z-index: -1;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: url(images/030.JPG) 30%  0 no-repeat;
+	  background-size: cover;
+	}
 	/*第一塊===========================================*/
 		.box3 .sanG1 .p1{
 			max-width: 90%;
@@ -548,11 +560,23 @@
 		}
 /*box5===============================================*/
 		.box5{
-			background-image: url(images/050.png);
+			/*background-image: url(images/050.png);*/
 			background-repeat: no-repeat;
 			background-size: 100vh;
-			background-attachment: fixed;
+			/*background-attachment: fixed;*/
+			position: relative;
 		}
+	.box5:before {
+	  content: ' ';
+	  position: absolute;
+	  z-index: -1;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: url(images/050.JPG) 100% 0 no-repeat;
+	  background-size: cover;
+	}
 	/*第一塊===========================================*/
 		.box5 .bur1 .p1{
 			display: none;
@@ -571,6 +595,16 @@
 		}
 
 @media only screen and (min-width:450px){
+	.controller{
+		height: 45vw;
+	}
+	.controller li{
+		height: 4vw;
+		width: 4vw;
+		margin: 3vw 0;
+		font-size: 3vw;
+		line-height: 4vw;
+	}
 	/*入口===============================================*/
 		.entrance h1{
 			font-size: 10vw;
@@ -708,16 +742,19 @@
 		font-size: 2vw;
 		line-height: 2.5vw;
 	}
+		.cona{	
+		transform: scale(.5);
+	}
 /*box0================================================*/
 	.box0{
-		background-image: url(images/s002.PNG);
-		
+		background-image: url(images/002.JPG);
 		height: 100vh;
 		position: absolute;
 		left: 0;
 		top: 0;
 		z-index: 5;
 	}
+	.box0:before{display: none;}
 	/*map==================================================*/
 		.box0 .mapp{
 			height: 100%;	
@@ -948,10 +985,12 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-attachment: fixed; 
+			position: relative;
 		}
 		.box3 .main{
 			width: 60%;
 		}
+		.box3:before{display: none;}
 	/*第一塊===========================================*/
 		.box3 .sanG1{
 			margin-top: 10%;
@@ -1068,7 +1107,9 @@
 			background-repeat: no-repeat;
 			background-size: 100vh;
 			background-attachment: fixed;
+			position: relative;
 		}
+		.box5:before{display: none;}
 		.box5 .main{
 			width: 60%;
 			margin-top: 5%;
