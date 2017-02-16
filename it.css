@@ -1,6 +1,6 @@
 
 		body{
-			overflow-x: hidden;
+			/*overflow-x: hidden;*/
 		}
 		.pp{
 			display: none;
@@ -79,7 +79,6 @@
 	.box_control{
 		width: 100vw;
 		height: 100vh;
-		background-attachment: fixed;
 	}
 	.boxx{
 		float: left;
@@ -118,15 +117,27 @@
 		animation: blin 1s infinite alternate;		
 		}
 	.box0{
-		background-image: url(images/s002.PNG);
+		background-image: url(images/002.JPG);
 		background-position: center;
-		background-attachment: fixed;
+		/*background-attachment: fixed;*/
 		background-size: cover;
 		height: 100vh;
 		position: absolute;
 		left: 0;
 		top: 0;
 		z-index: 5;
+		overflow: hidden;
+	}
+	.box0:before {
+	  content: ' ';
+	  position: fixed;
+	  z-index: -1;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: url(path/to/image) center 0 no-repeat;
+	  background-size: cover;
 	}
 	/*map==================================================*/
 		.box0 .mapp .timme{
@@ -602,6 +613,12 @@
 		}
 		.box0 .schedule .timme {
 			height: 12vw;
+			font-size: 3vw;
+			line-height: 12vw;
+		}
+		.box0 .mapp .timme{
+			height: 12vw;
+			width: 12vw;
 			font-size: 3vw;
 			line-height: 12vw;
 		}
