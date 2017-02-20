@@ -63,11 +63,11 @@
 		}
 		#bgvid { 
 			z-index: -3;
-			/*width: 100%;*/
-    		/*height: 100%;*/
-    		/*max-width: 100%;*/
+    		position: fixed;
+    		min-width: 100%;
     		min-height: 100%;
-		    position: fixed;
+    		width: auto;
+   			height: auto;
 		    bottom: 0;
 		    left: 0%;
 		    /*background: url(images/000.JPG) no-repeat;*/
